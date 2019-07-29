@@ -5,5 +5,5 @@ def derivativeReLU(x):
     :param x: input x
     :return: derivation of ReLU function
     """
-    result = (x > 0)*x
+    result = (x > 0)*1
     return result
