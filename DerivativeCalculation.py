@@ -56,7 +56,7 @@ def derivativePReLU(a, x):
     :param x: input x
     :return: derivation of PReLU function
     """
-    result = (x < 0)*x*a + (x >= 0)*x
+    result = (x < 0)*a + (x >= 0)*1
     return result
 
 
@@ -77,8 +77,8 @@ def derivativeSoftPlus(x):
     """
     Derivative calculation of SoftPlus activation function
     f(x) = log_e(1+exp(x))
-    :param x:
-    :return:
+    :param x: input x
+    :return: derivation of SoftPlus function
     """
     numerator = math.exp(x)
     denominator = (1+math.exp(x))*1
