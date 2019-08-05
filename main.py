@@ -33,4 +33,4 @@ if __name__ == "__main__":
     parser.add_argument('x', default=0, help='x')
 
     args = parser.parse_args()
-    print(activation_function('tanh',0.3,4))
+    print(activation_function(args.activation_name, args.a, args.x))
