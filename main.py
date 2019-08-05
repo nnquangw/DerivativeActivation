@@ -29,8 +29,8 @@ def activation_function(act, a, x):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Derivative Calculation of Activation functions')
     parser.add_argument('activation_name', default='', help='activation function name')
-    parser.add_argument('a', default=0, help='factor a')
-    parser.add_argument('x', default=0, help='x')
+    parser.add_argument('a', type=float, default=0, help='factor a')
+    parser.add_argument('x', type=float, default=0, help='x')
 
     args = parser.parse_args()
     print(activation_function(args.activation_name, args.a, args.x))
